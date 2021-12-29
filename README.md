@@ -1,2 +1,2 @@
-# vr-shoe-store
+# reactxr_playground
 Created with CodeSandbox

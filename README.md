@@ -1,2 +1,1 @@
-# reactxr_playground
-Created with CodeSandbox
+# VR Shoe Store

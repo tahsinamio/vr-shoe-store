@@ -4,7 +4,7 @@ import { useGLTF, OrbitControls, Plane, Sphere, Sky, useMatcapTexture, Text } fr
 import { usePlane, useBox, Physics, useSphere } from '@react-three/cannon'
 import { useShoeStore } from '../index'
 
-function Box({ color, size, scale, children, ...rest }: any) {
+export function Box({ color, size, scale, children, ...rest }: any) {
     return (
         <mesh scale={scale} {...rest}>
             <boxBufferGeometry attach="geometry" args={size} />

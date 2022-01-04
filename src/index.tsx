@@ -102,20 +102,24 @@ const App = () => (
         <div className={'logo'}>
             <span>loadplace</span>
         </div>
-        <div className={'containerXR'}>
-            <VRCanvas shadowMap>
-                <Physics
-                    gravity={[0, -2, 0]}
-                    iterations={20}
-                    defaultContactMaterial={{
-                        friction: 0.09
-                    }}>
-                    <Scene />
-                    <DefaultXRControllers />
-                </Physics>
-            </VRCanvas>
+        <div className={'content'}>
+            <div className={'containerXR'}>
+                <VRCanvas shadowMap>
+                    <Physics
+                        gravity={[0, -2, 0]}
+                        iterations={20}
+                        defaultContactMaterial={{
+                            friction: 0.09
+                        }}>
+                        <Scene />
+                        <DefaultXRControllers />
+                    </Physics>
+                </VRCanvas>
+            </div>
+            <div className={'containerCard'}>
+                <Card />
+            </div>
         </div>
-        <Card />
     </div>
 )
 

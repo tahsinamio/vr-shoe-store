@@ -2,15 +2,6 @@
     box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     background: black;
 }
@@ -19,7 +10,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 24px;
     color: white;
-    margin: 25px;
+    margin: 2px;
     width: 350px;
     height: 110px;
     outline: 1px black;
@@ -34,9 +25,62 @@ body {
     outline: 1px black;
 }
 
+.content {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 .containerXR {
+    width: 1400px;
+    height: 700px;
+    margin-right: 20px;
+    margin-left: 100px;
+    /* outline: dashed 1px rgb(208, 75, 75); */
+}
+
+.containerCard {
     margin: 25px;
     width: 875px;
     height: 500px;
-    outline: 1px black;
+    outline: 1px rgb(3, 245, 100);
+}
+
+.canvas {
+    outline: dashed 1px rgb(33, 230, 154);
+}
+
+.instructions {
+    color: white;
+    outline: dashed 1px rgb(33, 230, 154);
+    padding: 15px 25px;
+}
+
+.checkoutButton {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(33, 230, 154);
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    margin-top: 20px;
+}
+
+.checkoutButton:hover {
+    background-color: rgb(69, 201, 150);
+}
+
+.checkoutButton:active {
+    background-color: rgb(63, 163, 230);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }

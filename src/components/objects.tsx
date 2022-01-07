@@ -61,8 +61,8 @@ export const Stand = ({ position, args = [6, 6, 6] }: any) => {
     const [tex] = useMatcapTexture('C7C0AC_2E181B_543B30_6B6270')
 
     return (
-        <Box scale={[0.5, 3, 0.5]} position={[-0.18, -0.7, -0.45]} ref={boxRef} args={args as any} castShadow>
-            <meshMatcapMaterial attach="material" matcap={tex as any} />
+        <Box scale={[0.5, 3, 0.5]} position={[-0.18, -0.7, -0.45]} ref={boxRef} args={args} castShadow>
+            <meshMatcapMaterial attach="material" matcap={tex} />
         </Box>
     )
 }

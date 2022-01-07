@@ -2,8 +2,8 @@ import React, { useRef } from 'react'
 import { Interactive } from '@react-three/xr'
 import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
-import { useShoeStore } from './index'
-import './styles.css'
+import { useShoeStore } from '../index'
+import { Button, Selected } from './objects'
 
 export const Shoe = () => {
     const ref = useRef()

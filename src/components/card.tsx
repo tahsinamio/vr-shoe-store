@@ -1,6 +1,6 @@
 import React, { Suspense, useRef, useState, useEffect } from 'react'
 import { Canvas, useFrame } from '@react-three/fiber'
-import { ShoeDisplay } from './ShoeDisplay'
+import { ShoeDisplay } from './shoeDisplay'
 
 export const Card = () => {
     return (

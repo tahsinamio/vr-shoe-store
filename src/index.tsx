@@ -6,9 +6,9 @@ import { OrbitControls, Plane, Sphere, Sky } from '@react-three/drei'
 import { usePlane, Physics, useSphere } from '@react-three/cannon'
 import create from 'zustand'
 import { joints } from './joints'
-import { Shoe } from './components/Shoe'
-import { Card } from './components/Card'
-import { Stand } from './components/Objects'
+import { Shoe } from './components/shoe'
+import { Card } from './components/card'
+import { Stand } from './components/objects'
 import './styles.css'
 
 export const useShoeStore = create((set) => ({

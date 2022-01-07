@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom'
-import React, { useRef, useState, useEffect, Fragment } from 'react'
-import { VRCanvas, Hands, Interactive, DefaultXRControllers } from '@react-three/xr'
+import React, { Suspense, useState, useEffect, Fragment } from 'react'
+import { VRCanvas, Hands, DefaultXRControllers } from '@react-three/xr'
 import { useThree, useFrame } from '@react-three/fiber'
-import { useGLTF, OrbitControls, Plane, Sphere, Sky, useMatcapTexture, Text } from '@react-three/drei'
-import { usePlane, useBox, Physics, useSphere } from '@react-three/cannon'
+import { OrbitControls, Plane, Sphere, Sky } from '@react-three/drei'
+import { usePlane, Physics, useSphere } from '@react-three/cannon'
 import create from 'zustand'
 import { joints } from './joints'
 import { Shoe } from './components/Shoe'
@@ -103,22 +103,24 @@ const App = () => (
             <span>loadplace</span>
         </div>
         <div className={'content'}>
-            <div className={'containerXR'}>
-                <VRCanvas shadowMap>
-                    <Physics
-                        gravity={[0, -2, 0]}
-                        iterations={20}
-                        defaultContactMaterial={{
-                            friction: 0.09
-                        }}>
-                        <Scene />
-                        <DefaultXRControllers />
-                    </Physics>
-                </VRCanvas>
-            </div>
-            <div className={'containerCard'}>
-                <Card />
-            </div>
+            <Suspense fallback={'...loading'}>
+                <div className={'containerXR'}>
+                    <VRCanvas shadowMap>
+                        <Physics
+                            gravity={[0, -2, 0]}
+                            iterations={20}
+                            defaultContactMaterial={{
+                                friction: 0.09
+                            }}>
+                            <Scene />
+                            <DefaultXRControllers />
+                        </Physics>
+                    </VRCanvas>
+                </div>
+                <div className={'containerCard'}>
+                    <Card />
+                </div>
+            </Suspense>
         </div>
     </div>
 )

@@ -1,10 +1,10 @@
-import React, { useRef, useState, useEffect, Fragment } from 'react'
-import { VRCanvas, Hands, Interactive, DefaultXRControllers } from '@react-three/xr'
-import { useGLTF, OrbitControls, Plane, Sphere, Sky, useMatcapTexture, Text } from '@react-three/drei'
-import { usePlane, useBox, Physics, useSphere } from '@react-three/cannon'
+import React, { useState } from 'react'
+import { Interactive } from '@react-three/xr'
+import { useMatcapTexture, Text } from '@react-three/drei'
+import { useBox } from '@react-three/cannon'
 import { useShoeStore } from '../index'
 
-export function Box({ color, size, scale, children, ...rest }: any) {
+export const Box = ({ color, size, scale, children, ...rest }: any) => {
     return (
         <mesh scale={scale} {...rest}>
             <boxBufferGeometry attach="geometry" args={size} />
@@ -14,7 +14,7 @@ export function Box({ color, size, scale, children, ...rest }: any) {
     )
 }
 
-export function Button(props: any) {
+export const Button = (props: any) => {
     const [hover, setHover] = useState(false)
     const [color, setColor] = useState()
     const items = useShoeStore((state) => state)
@@ -35,7 +35,7 @@ export function Button(props: any) {
     )
 }
 
-export function Selected(props: any) {
+export const Selected = (props: any) => {
     const [hover, setHover] = useState(false)
     const [color, setColor] = useState()
     const items = useShoeStore((state) => state)
@@ -56,7 +56,7 @@ export function Selected(props: any) {
     )
 }
 
-export function Stand({ position, args = [6, 6, 6] }: any) {
+export const Stand = ({ position, args = [6, 6, 6] }: any) => {
     const [boxRef] = useBox(() => ({ position, mass: 1, args }))
     const [tex] = useMatcapTexture('C7C0AC_2E181B_543B30_6B6270')
 

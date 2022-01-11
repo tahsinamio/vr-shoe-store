@@ -92,7 +92,7 @@ function Scene() {
             <Plane ref={floorRef} args={[10, 10]} receiveShadow>
                 <meshStandardMaterial attach="material" color="#fff" />
             </Plane>
-            <OrbitControls minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 3} enableZoom={false} />
+            <OrbitControls minPolarAngle={Math.PI / 3} maxPolarAngle={Math.PI / 3} enablePan={false} enableZoom={false} />
         </>
     )
 }

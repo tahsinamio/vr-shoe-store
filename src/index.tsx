@@ -4,6 +4,7 @@ import { VRCanvas, Hands, DefaultXRControllers } from '@react-three/xr'
 import { useThree, useFrame } from '@react-three/fiber'
 import { OrbitControls, Plane, Sphere, Sky } from '@react-three/drei'
 import { usePlane, Physics, useSphere } from '@react-three/cannon'
+import { VirtualStorage } from 'grommet-icons'
 import create from 'zustand'
 import { joints } from './joints'
 import { Shoe } from './components/shoe'
@@ -100,8 +101,12 @@ function Scene() {
 const App = () => (
     <div className={'container'}>
         <div className={'logo'}>
+            <div className={'logoIcon'}>
+                <VirtualStorage color="white" />
+            </div>
             <span>loadplace</span>
         </div>
+
         <div className={'content'}>
             <Suspense fallback={'...loading'}>
                 <div className={'containerXR'}>

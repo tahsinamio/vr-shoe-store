@@ -16,9 +16,8 @@ export const Card = () => {
             </div>
             <div className={'instructions'}>
                 <p>Enter VR and customize your shoe</p>
-                <p>Checkout once you are happy with your creation</p>
+                <p>Purchase using DeSend inside VR</p>
             </div>
-            <button className={'checkoutButton'}>Checkout</button>
         </div>
     )
 }

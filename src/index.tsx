@@ -9,6 +9,7 @@ import create from 'zustand'
 import { joints } from './joints'
 import { Shoe } from './components/shoe'
 import { Card } from './components/card'
+import Login from './components/Login'
 import { Button, Stand } from './components/objects'
 import './styles.css'
 
@@ -109,9 +110,7 @@ const App = () => (
                 </div>
                 <span>loadplace</span>
             </div>
-            <div className={'loginBtn'}>
-                <button className={'button-23'}>Login</button>
-            </div>
+            <Login />
         </div>
         <div className={'content'}>
             <Suspense fallback={'...loading'}>

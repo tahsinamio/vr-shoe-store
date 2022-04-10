@@ -12,6 +12,7 @@
     "@react-three/xr": "3.2.0",
     "@types/react": "17.0.11",
     "@types/react-dom": "17.0.7",
+    "axios": "0.26.1",
     "grommet-icons": "4.7.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",

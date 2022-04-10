@@ -15,6 +15,7 @@ import './styles.css'
 export const useShoeStore = create((set) => ({
     current: 'Hover',
     selected: 'Selected',
+    prompt_hidden: true,
     laces: '#0000ff',
     mesh: '#ffffff',
     caps: '#ffffff',

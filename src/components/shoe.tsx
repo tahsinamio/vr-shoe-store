@@ -4,6 +4,7 @@ import { useFrame } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import { useShoeStore } from '../index'
 import { Button, Selected } from './objects'
+import Prompt from './prompt'
 
 export const Shoe = () => {
     const ref = useRef()
@@ -32,6 +33,7 @@ export const Shoe = () => {
         <group scale={[0.16, 0.16, 0.16]} position={[-0.18, 1.1, -0.4]}>
             <Button position={[-1, -1.7, 1]} rotation={[-0.7, 0, 0]} scale={[2, 2, 2]} item={'laces'} />
             <Selected position={[1, -1.7, 1]} rotation={[-0.7, 0, 0]} scale={[2, 2, 2]} item={'laces'} />
+            <Prompt />
             <group ref={ref}>
                 <Interactive onSelect={onSelect}>
                     <Interactive onHover={() => hovered('laces')}>

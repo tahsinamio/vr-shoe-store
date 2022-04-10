@@ -8,7 +8,7 @@ export default function Prompt() {
     const promptColor = useShoeStore((state) => state.prompt_color)
 
     const onSelect = () => {
-        console.log('dpayed?')
+        useShoeStore.setState({ prompt_hidden: true })
     }
 
     const onHover = () => {
@@ -43,8 +43,12 @@ export default function Prompt() {
                             <meshStandardMaterial />
                         </Text>
                     </Box>
-                    <Box marginTop={0.1} marginLeft={0.13}>
-                        <Text fontSize={0.2} letterSpacing={0.1} textAlign="center">
+                    <Box marginTop={0.13} marginLeft={0.17}>
+                        <Text
+                            fontSize={0.2}
+                            letterSpacing={0.1}
+                            textAlign="center"
+                            font="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap">
                             dPAY
                             <meshStandardMaterial />
                         </Text>

@@ -1,34 +1,56 @@
 import React from 'react'
-import { Flex, Box, useReflow } from '@react-three/flex'
+import { Interactive } from '@react-three/xr'
+import { Flex, Box } from '@react-three/flex'
 import { Text } from './Text'
+import { useShoeStore } from '../index'
 
 export default function Prompt() {
+    const promptColor = useShoeStore((state) => state)
+
+    const onSelect = () => {
+        console.log('dpayed?')
+    }
+
+    const onHover = () => {
+        useShoeStore.setState({ prompt_color: '#00a7ff' })
+    }
+
+    const onBlur = () => {
+        useShoeStore.setState({ prompt_color: '#007cff' })
+    }
+
     return (
-        <Box position={[2, 0, 1]} rotation={[0, -0.5, 0]} flexDirection="row" alignItems="center" justifyContent="center" flexWrap="wrap" width="100%">
-            <Box margin={0.05}>
-                <mesh position={[2.5 / 2, -1, 0]}>
-                    <planeBufferGeometry args={[2.5, 2]} />
-                    <meshStandardMaterial color={['#2d4059', '#ea5455', '#decdc3', '#e5e5e5'][0 % 4]} />
-                </mesh>
-                <Box flexDirection="column" padding={0.1}>
-                    <Box marginBottom={0.1} marginLeft={0.05}>
-                        <Text fontSize={0.2} letterSpacing={0.1} textAlign="center">
-                            OUR PRODUCTS
+        <Flex justifyContent="center" alignItems="center" position={[1.5, 0.5, 1]} rotation={[0, -0.3, 0]}>
+            <Box centerAnchor>
+                <Interactive onSelect={onSelect} onHover={onHover} onBlur={onBlur}>
+                    <group>
+                        <mesh position={[0.45, -0.7, 0]}>
+                            <planeBufferGeometry args={[1, 0.3]} />
+                            <meshStandardMaterial color={promptColor} />
+                        </mesh>
+                    </group>
+                </Interactive>
+                <Box flexDirection="column" padding={0}>
+                    <Box marginTop={0} marginRight={1}>
+                        <Text fontSize={0.1} letterSpacing={0.1} textAlign="center">
+                            $DESO
                             <meshStandardMaterial />
                         </Text>
                     </Box>
-                    <Box flexDirection="row" flexWrap="wrap" width={2} flexGrow={1}>
-                        {new Array(8).fill(0).map((k, i) => (
-                            <Box margin={0.05} key={i}>
-                                <mesh position={[0.3 / 2, -0.3 / 2, 0]}>
-                                    <planeBufferGeometry args={[0.3, 0.3]} />
-                                    <meshStandardMaterial />
-                                </mesh>
-                            </Box>
-                        ))}
+                    <Box marginTop={-0.13} marginRight={1}>
+                        <Text fontSize={0.4} letterSpacing={0.1} textAlign="center">
+                            2.04
+                            <meshStandardMaterial />
+                        </Text>
+                    </Box>
+                    <Box marginTop={0.1} marginLeft={0.13}>
+                        <Text fontSize={0.2} letterSpacing={0.1} textAlign="center">
+                            dePAY
+                            <meshStandardMaterial />
+                        </Text>
                     </Box>
                 </Box>
             </Box>
-        </Box>
+        </Flex>
     )
 }

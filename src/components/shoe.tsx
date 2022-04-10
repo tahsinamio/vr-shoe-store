@@ -33,7 +33,7 @@ export const Shoe = () => {
         <group scale={[0.16, 0.16, 0.16]} position={[-0.18, 1.1, -0.4]}>
             <Button position={[-1, -1.7, 1]} rotation={[-0.7, 0, 0]} scale={[2, 2, 2]} item={'laces'} />
             <Selected position={[1, -1.7, 1]} rotation={[-0.7, 0, 0]} scale={[2, 2, 2]} item={'laces'} />
-            <Prompt />
+            {!items.prompt_hidden && <Prompt />}
             <group ref={ref}>
                 <Interactive onSelect={onSelect}>
                     <Interactive onHover={() => hovered('laces')}>

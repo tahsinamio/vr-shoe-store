@@ -58,7 +58,7 @@ export const Selected = (props: any) => {
 
 export const Stand = ({ position, args = [6, 6, 6] }: any) => {
     const [boxRef] = useBox(() => ({ position, mass: 1, args }))
-    const [tex] = useMatcapTexture('2E763A_78A0B7_B3D1CF_14F209')
+    const [tex] = useMatcapTexture('7877EE_D87FC5_75D9C7_1C78C0')
 
     return (
         <Box scale={[0.5, 3, 0.5]} position={[-0.18, -0.7, -0.45]} ref={boxRef} args={args} castShadow>

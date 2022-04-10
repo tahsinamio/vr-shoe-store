@@ -6,6 +6,15 @@ body {
     background: black;
 }
 
+.header {
+    display: flex;
+    width: 100%;
+}
+
+.logoIcon {
+    margin: 2px;
+}
+
 .logo {
     display: flex;
     font-family: Helvetica, Arial, sans-serif;
@@ -18,8 +27,10 @@ body {
     height: 110px;
 }
 
-.logoIcon {
-    margin: 2px;
+.loginBtn {
+    float: right;
+    margin-left: 1050px;
+    box-sizing: border-box;
 }
 
 .container {
@@ -33,6 +44,7 @@ body {
 
 .content {
     display: flex;
+    align-items: center;
     width: 1200px;
     margin: 0 auto;
 }
@@ -40,55 +52,69 @@ body {
 .containerXR {
     width: 1400px;
     height: 700px;
-    margin-right: 20px;
+    margin-top: -150px;
     margin-left: 100px;
-    margin-top: -100px;
-    /* outline: dashed 1px rgb(208, 75, 75); */
 }
 
 .containerCard {
     margin: 25px;
     margin-top: 150px;
-    width: 1200px;
+    margin-left: 50px;
+    width: 1000px;
     height: 500px;
-    outline: 1px rgb(3, 245, 100);
+    outline: 1px rgb(147, 112, 219);
 }
 
 .canvas {
-    outline: dashed 1px rgb(33, 230, 154);
+    outline: dashed 1px rgb(147, 112, 219);
 }
 
 .instructions {
     color: white;
-    outline: dashed 1px rgb(33, 230, 154);
+    outline: dashed 1px rgb(147, 112, 219);
     padding: 15px 25px;
 }
 
-.checkoutButton {
-    width: 100%;
-    height: 40px;
-    background-color: rgb(33, 230, 154);
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    font-size: 24px;
+/* CSS */
+.button-23 {
+    background-color: #ffffff;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
     cursor: pointer;
+    display: inline-block;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
     text-align: center;
     text-decoration: none;
-    outline: none;
-    color: #fff;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    margin-top: 20px;
+    touch-action: manipulation;
+    transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s, transform 0.1s;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
 }
 
-.checkoutButton:hover {
-    background-color: rgb(69, 201, 150);
+.button-23:focus-visible {
+    box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+    transition: box-shadow 0.2s;
 }
 
-.checkoutButton:active {
-    background-color: rgb(63, 163, 230);
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
+.button-23:active {
+    background-color: #f7f7f7;
+    border-color: #000000;
+    transform: scale(0.96);
+}
+
+.button-23:disabled {
+    border-color: #dddddd;
+    color: #dddddd;
+    cursor: not-allowed;
+    opacity: 1;
 }

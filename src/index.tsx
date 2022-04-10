@@ -9,7 +9,7 @@ import create from 'zustand'
 import { joints } from './joints'
 import { Shoe } from './components/shoe'
 import { Card } from './components/card'
-import { Stand } from './components/objects'
+import { Button, Stand } from './components/objects'
 import './styles.css'
 
 export const useShoeStore = create((set) => ({
@@ -100,13 +100,17 @@ function Scene() {
 
 const App = () => (
     <div className={'container'}>
-        <div className={'logo'}>
-            <div className={'logoIcon'}>
-                <VirtualStorage color="white" />
+        <div className={'header'}>
+            <div className={'logo'}>
+                <div className={'logoIcon'}>
+                    <VirtualStorage color="white" />
+                </div>
+                <span>loadplace</span>
             </div>
-            <span>loadplace</span>
+            <div className={'loginBtn'}>
+                <button className={'button-23'}>Login</button>
+            </div>
         </div>
-
         <div className={'content'}>
             <Suspense fallback={'...loading'}>
                 <div className={'containerXR'}>

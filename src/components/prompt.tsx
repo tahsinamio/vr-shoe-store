@@ -5,7 +5,7 @@ import { Text } from './Text'
 import { useShoeStore } from '../index'
 
 export default function Prompt() {
-    const promptColor = useShoeStore((state) => state)
+    const promptColor = useShoeStore((state) => state.prompt_color)
 
     const onSelect = () => {
         console.log('dpayed?')
@@ -20,7 +20,7 @@ export default function Prompt() {
     }
 
     return (
-        <Flex justifyContent="center" alignItems="center" position={[1.5, 0.5, 1]} rotation={[0, -0.3, 0]}>
+        <Flex justifyContent="center" alignItems="center" position={[1.5, 1.4, 1]} rotation={[0, -0.3, 0]}>
             <Box centerAnchor>
                 <Interactive onSelect={onSelect} onHover={onHover} onBlur={onBlur}>
                     <group>
@@ -45,7 +45,7 @@ export default function Prompt() {
                     </Box>
                     <Box marginTop={0.1} marginLeft={0.13}>
                         <Text fontSize={0.2} letterSpacing={0.1} textAlign="center">
-                            dePAY
+                            dPAY
                             <meshStandardMaterial />
                         </Text>
                     </Box>

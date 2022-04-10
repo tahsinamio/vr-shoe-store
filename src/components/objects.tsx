@@ -19,13 +19,8 @@ export const Button = (props: any) => {
     const [color, setColor] = useState()
     const items = useShoeStore((state) => state)
 
-    const onSelect = () => {
-        useShoeStore.setState({ laces: '#321029' })
-        setColor(321029)
-    }
-
     return (
-        <Interactive onSelect={onSelect} onHover={() => setHover(true)} onBlur={() => setHover(false)}>
+        <Interactive onHover={() => setHover(true)} onBlur={() => setHover(false)}>
             <Box color={color} scale={hover ? [0.75, 0.75, 0.75] : [0.65, 0.65, 0.65]} size={[0.4, 0.1, 0.1]} {...props}>
                 <Text position={[0, 0, 0.06]} fontSize={0.05} color="#000" anchorX="center" anchorY="middle">
                     {items.current}
